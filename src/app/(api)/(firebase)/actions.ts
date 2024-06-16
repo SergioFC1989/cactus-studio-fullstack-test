@@ -1,11 +1,12 @@
 "use server";
 
-import { firebaseQuery } from "@/services/firebase/firebase-query";
+import { firebaseQueryGetDocs } from "@/services/firebase/firebase-query";
+import { PointsData } from "./types";
 
 export const getPoints = async () => {
   try {
-    const response = await firebaseQuery("points");
-    return response;
+    const response = await firebaseQueryGetDocs("points");
+    return response as PointsData[] | [];
   } catch (error) {
     throw new Error("Error fetching points data");
   }
@@ -13,7 +14,7 @@ export const getPoints = async () => {
 
 export const getMaterials = async () => {
   try {
-    const response = await firebaseQuery("materials");
+    const response = await firebaseQueryGetDocs("materials");
     return response;
   } catch (error) {
     throw new Error("Error fetching materials data");

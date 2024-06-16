@@ -7,4 +7,4 @@ export interface FirebaseConfig {
   appId?: string;
 }
 
-export type CollectionName = "points" | "materials";
+export type FirebaseCollectionName = "points" | "materials";

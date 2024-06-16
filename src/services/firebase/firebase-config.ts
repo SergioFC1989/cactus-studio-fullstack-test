@@ -1,4 +1,4 @@
-import { FirebaseConfig } from "./type";
+import { FirebaseConfig } from "../type";
 
 export const firebaseConfig: FirebaseConfig = {
   apiKey: process.env.FIREBASE_API_KEY,
