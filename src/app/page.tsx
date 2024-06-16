@@ -1,9 +1,9 @@
-import { ImageComponent } from "@/components/ImageComponent";
+import { ImageLayoutComponent } from "@/components/ImageLayoutComponent";
 
-export default function Home() {
-  return (
-    <div className="w-full h-full">
-      <ImageComponent />
-    </div>
-  );
-}
+const ImageLayout = () => (
+  <div className="w-20 h-full">
+    <ImageLayoutComponent />
+  </div>
+);
+
+export default ImageLayout;

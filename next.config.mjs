@@ -8,6 +8,12 @@ const nextConfig = {
       },
     ],
   },
+  env: {
+    FIREBASE_TOKEN: process.env.FIREBASE_TOKEN,
+  },
+  experimental: {
+    taint: true,
+  },
 };
 
 export default nextConfig;
