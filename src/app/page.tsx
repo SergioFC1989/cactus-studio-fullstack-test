@@ -3,7 +3,15 @@ import { Suspense } from "react";
 
 const ImageLayout = () => (
   <div className="w-full h-full">
-    <ImageLayoutComponent />
+    <Suspense
+      fallback={
+        <div className="absolute bg-green w-full h-full">
+          HOLAaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+        </div>
+      }
+    >
+      <ImageLayoutComponent />
+    </Suspense>
   </div>
 );
 

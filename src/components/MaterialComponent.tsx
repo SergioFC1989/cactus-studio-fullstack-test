@@ -10,8 +10,8 @@ export const MaterialComponent = ({
   onChangeMaterials: Dispatch<SetStateAction<string>>;
 }) => {
   return materials.length ? (
-    <div className="fixed py-10">
-      <div className="min-w-44 lg:min-w-60 flex flex-col justify-center gap-10 p-5 bg-opacity-20 bg-black rounded-sm">
+    <div className="fixed h-full py-10">
+      <div className="min-w-44 lg:min-w-60 h-full overflow-auto flex flex-col gap-10 p-5 bg-opacity-20 bg-black rounded-sm">
         {materials.map((material) => (
           <div className="flex flex-col items-center gap-2" key={material.id}>
             <Image
