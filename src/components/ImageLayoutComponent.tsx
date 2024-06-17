@@ -15,9 +15,9 @@ export const ImageLayoutComponent = () => {
   } = useImageLayout();
 
   return (
-    <div className="absolute w-full h-full -z-10 px-10">
+    <div className="w-full h-full -z-10 px-10">
       {images.map((image: string, id: number) => (
-        <Image fill className="px-10" key={id} src={image} alt="image" />
+        <Image fill className="p-10" key={id} src={image} alt="image" />
       ))}
       <PointComponent points={points} onChangePoints={setSelectPointId} />
       <MaterialComponent

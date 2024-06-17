@@ -10,21 +10,21 @@ export const MaterialComponent = ({
   onChangeMaterials: Dispatch<SetStateAction<string>>;
 }) => {
   return materials.length ? (
-    <div className="fixed mx-2 my-4">
-      <div className="flex min-w-44 flex-col justify-center gap-10 p-5 bg-opacity-20 bg-black rounded-sm">
+    <div className="fixed h-full py-10">
+      <div className="min-w-44 lg:min-w-60 h-full overflow-auto flex flex-col gap-10 p-5 bg-opacity-20 bg-black rounded-sm">
         {materials.map((material) => (
           <div className="flex flex-col items-center gap-2" key={material.id}>
             <Image
-              width={10}
-              height={10}
-              className="w-28 h-28 rounded-sm hover:opacity-50 hover:cursor-pointer"
+              width={100}
+              height={100}
+              className="w-16 h-16 lg:w-28 lg:h-28 rounded-sm hover:opacity-50 hover:cursor-pointer"
               src={material.data.materialPreview}
               alt={material.data.name}
               onClick={() =>
                 onChangeMaterials(material.data.layers[material.data.points[0]])
               }
             />
-            <h2>{material.data.name}</h2>
+            <p className="text-xs lg:text-base">{material.data.name}</p>
           </div>
         ))}
       </div>
