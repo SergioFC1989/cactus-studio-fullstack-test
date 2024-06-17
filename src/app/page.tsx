@@ -1,7 +1,8 @@
 import { ImageLayoutComponent } from "@/components/ImageLayoutComponent";
+import { Suspense } from "react";
 
 const ImageLayout = () => (
-  <div className="w-20 h-full">
+  <div className="w-full h-full">
     <ImageLayoutComponent />
   </div>
 );
